@@ -1,0 +1,3 @@
+[submodule "TestApp/3rd_party/Submodules/TestLib"]
+	path = TestApp/3rd_party/Submodules/TestLib
+	url = git@github.com:dwarfovich/TestLib.git
