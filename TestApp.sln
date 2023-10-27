@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "TestApp\TestApp.vcxproj", "{06C36EAE-CB2B-4238-8F61-148E32252BDA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLib", "TestApp\3rd_party\Submodules\TestLib\TestLib\TestLib.vcxproj", "{A1A56FBD-337F-4AEE-B03B-CD660B6030FD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCApplication1", "MFCApplication1\MFCApplication1.vcxproj", "{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLib", "Submodules\TestLib\TestLib\TestLib.vcxproj", "{A1A56FBD-337F-4AEE-B03B-CD660B6030FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,14 @@ Global
 		{06C36EAE-CB2B-4238-8F61-148E32252BDA}.Release|x64.Build.0 = Release|x64
 		{06C36EAE-CB2B-4238-8F61-148E32252BDA}.Release|x86.ActiveCfg = Release|Win32
 		{06C36EAE-CB2B-4238-8F61-148E32252BDA}.Release|x86.Build.0 = Release|Win32
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Debug|x64.ActiveCfg = Debug|x64
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Debug|x64.Build.0 = Debug|x64
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Debug|x86.ActiveCfg = Debug|Win32
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Debug|x86.Build.0 = Debug|Win32
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Release|x64.ActiveCfg = Release|x64
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Release|x64.Build.0 = Release|x64
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Release|x86.ActiveCfg = Release|Win32
+		{BEF148F0-B423-43C6-A3EE-BB99ED2298AD}.Release|x86.Build.0 = Release|Win32
 		{A1A56FBD-337F-4AEE-B03B-CD660B6030FD}.Debug|x64.ActiveCfg = Debug|x64
 		{A1A56FBD-337F-4AEE-B03B-CD660B6030FD}.Debug|x64.Build.0 = Debug|x64
 		{A1A56FBD-337F-4AEE-B03B-CD660B6030FD}.Debug|x86.ActiveCfg = Debug|Win32

@@ -71,19 +71,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)Build-$(Configuration)-$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)Build-$(ProjectName)-$(Configuration)-$(Platform)\</OutDir>
     <IntDir>$(OutDir).$(ProjectName)-intermediate\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)Build-$(Configuration)-$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)Build-$(ProjectName)-$(Configuration)-$(Platform)\</OutDir>
     <IntDir>$(OutDir).$(ProjectName)-intermediate\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Build-$(Configuration)-$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)Build-$(ProjectName)-$(Configuration)-$(Platform)\</OutDir>
     <IntDir>$(OutDir).$(ProjectName)-intermediate\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Build-$(Configuration)-$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)Build-$(ProjectName)-$(Configuration)-$(Platform)\</OutDir>
     <IntDir>$(OutDir).$(ProjectName)-intermediate\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -92,7 +92,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib\TestLib\3rd_party\include;C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\TestLib\TestLib\3rd_party\include;$(SolutionDir)Submodules\TestLib\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,7 +108,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib\TestLib\3rd_party\include;C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\TestLib\TestLib\3rd_party\include;$(SolutionDir)Submodules\TestLib\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,7 +124,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib\TestLib\3rd_party\include;C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\TestLib\TestLib\3rd_party\include;$(SolutionDir)Submodules\TestLib\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,7 +140,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib\TestLib\3rd_party\include;C:\Boo\Code\Temp\TestApp\TestApp\3rd_party\Submodules\TestLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Submodules\TestLib\TestLib\3rd_party\include;$(SolutionDir)Submodules\TestLib\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -169,12 +173,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="3rd_party\Submodules\TestLib\TestLib\TestLib.vcxproj">
-      <Project>{a1a56fbd-337f-4aee-b03b-cd660b6030fd}</Project>
-    </ProjectReference>
+    <ClInclude Include="TestPCH.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TestPCH.h" />
+    <ProjectReference Include="..\Submodules\TestLib\TestLib\TestLib.vcxproj">
+      <Project>{a1a56fbd-337f-4aee-b03b-cd660b6030fd}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
